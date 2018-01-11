@@ -1,0 +1,34 @@
+/* GLOBAL STYLES */
+body {
+    background: center url('../../assets/math-18077.jpg');
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 94vh;
+}
+
+footer {
+    background: tomato;
+    height: 6vh;
+}
+
+.suggestionBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option {
+    border: 1px solid lime;
+    width: 40%;
+}
