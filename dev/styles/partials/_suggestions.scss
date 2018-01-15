@@ -1,0 +1,22 @@
+/* SUGGESTION SECTION */
+
+.suggestionBox {
+    margin: 10vh auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 60%;
+    color: white;
+    visibility: hidden;
+}
+
+.option {
+    width: 40%;
+}
+
+.suggestionBox p, h3 {
+    font-size: 1.6rem;
+    text-shadow: longshadow(5,darken($yellow,25%));
+}
+

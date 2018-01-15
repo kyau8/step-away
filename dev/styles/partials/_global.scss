@@ -1,32 +1,68 @@
 /* GLOBAL STYLES */
 body {
-    background: center url('../../assets/math-18077.jpg');
-    background-size: cover;
+    font-size: 62.5%;
+    background: $green;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: $primaryFont;
+    position: relative;
+}
 
+h1, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 94vh;
 }
 
 footer {
     height: 6vh;
+    color: darken($pink, 25%);
 }
 
-.suggestionBox {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+a {
+    color: darken($pink, 25%);
+    text-decoration: none;
+    &:hover {
+        color: lighten($pink, 5%);
+    }
 }
 
-.option {
-    width: 40%;
+/* Credits to https://codepen.io/jackarmley/pen/WvGJPB */
+@function longshadow($num,$color: white){
+    $shadow: '';
+    $i: 0;
+    @for $i from 1 through $num{
+        $shadow: $shadow + (1 * $i) + 'px' + ' ' + (1 * ($i * 2)) + 'px' + ' ' + $color;
+        @if $i < $num{
+        $shadow: $shadow + ', ';
+        }
+    }
+    @return unquote($shadow);
+    }
+
+.word{
+    height: 20vh;
+    margin: 20vh auto 1vh auto;
+    color: white;
+    font: 700 normal 2.2rem/1.5 $primaryFont;
+    text-shadow: longshadow(10,darken($blue,10%));
+    text-align: center;
 }
+
+
+h3 {
+    font-size: 1.8rem;
+}
+
+
+

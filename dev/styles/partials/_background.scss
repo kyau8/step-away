@@ -1,0 +1,16 @@
+/* BACKGROUND STYLES */
+
+/* Credits to Clippy for the clip-path code */ 
+.shapeTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $blue;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 46%, 0 71%);
+    clip-path: polygon(0 0, 100% 0, 100% 46%, 0 71%);
+    z-index: -5;
+}
+
+

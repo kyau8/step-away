@@ -1,0 +1,42 @@
+/* MEDIA QUERY STYLES */
+
+@media (max-width:940px) {
+    .word {
+        height: 35vh;
+        margin-top: 5vh;
+    }
+    .suggestionBox {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .suggestionBox{
+        margin: 2rem 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .word {
+        font-size: 1.8rem;
+    }
+    button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    button {
+        font-size: 1.0rem;
+    }
+    h3 {
+        font-size: 1.2rem; 
+    }
+}
+
+@media (max-width: 420px) {
+    .word {
+        font-size: 1.6rem;
+    }
+}

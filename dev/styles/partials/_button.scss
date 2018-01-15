@@ -1,0 +1,38 @@
+/* BUTTON STYLES */
+
+/* Credits to http://jsfiddle.net/Calou/GCdDt/ for button code*/
+button {
+    background: $pink;
+    border: none;
+    font-size: 1.4rem;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    color: darken($pink,25%);
+    border-radius: 1rem;
+    -webkit-box-shadow: longshadow(5,darken($pink,25%)), 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: longshadow(5,darken($pink,25%)), 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: longshadow(5,darken($pink,25%)), 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    text-shadow: 0 -1px 1px darken($pink, 50%), 0 0 5px rgba(255, 255, 255, .8);
+}
+
+button:hover {
+    background-color: lighten($pink, 5%);
+    text-shadow: 0 -1px 1px darken($pink, 50%), 0 0 5px rgba(255, 255, 255, .8);
+}
+
+button:active, button:focus {
+    -webkit-box-shadow: longshadow(5,darken($pink,25%)), 0 12px 10px rgba(0, 0, 0, .3);
+    -moz-box-shadow: longshadow(5,darken($pink,25%)), 0 12px 10px rgba(0, 0, 0, .3);
+    box-shadow: longshadow(5,darken($pink,25%)), 0 12px 10px rgba(0, 0, 0, .3);
+}
+
+button:active {
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}

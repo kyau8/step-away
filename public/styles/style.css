@@ -133,8 +133,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 /* VARIABLES */
 /* GLOBAL STYLES */
 body {
-  background: center url("../../assets/math-18077.jpg");
-  background-size: cover;
+  font-size: 62.5%;
+  background: #acffa2;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,29 +145,59 @@ body {
           flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  font-family: "Montserrat", Arial, sans-serif;
+  position: relative; }
+
+h1, h3 {
+  padding: 0;
+  margin: 0; }
+
+.wrapper {
+  max-width: 80%;
+  margin: 0 auto; }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 94vh; }
 
 footer {
-  background: tomato;
-  height: 6vh; }
+  height: 6vh;
+  color: #f73a6d; }
 
+a {
+  color: #f73a6d;
+  text-decoration: none; }
+  a:hover {
+    color: #fdceda; }
+
+/* Credits to https://codepen.io/jackarmley/pen/WvGJPB */
+.word {
+  height: 20vh;
+  margin: 20vh auto 1vh auto;
+  color: white;
+  font: 700 normal 2.2rem/1.5 "Montserrat", Arial, sans-serif;
+  text-shadow: 1px 2px #7bb8e0, 2px 4px #7bb8e0, 3px 6px #7bb8e0, 4px 8px #7bb8e0, 5px 10px #7bb8e0, 6px 12px #7bb8e0, 7px 14px #7bb8e0, 8px 16px #7bb8e0, 9px 18px #7bb8e0, 10px 20px #7bb8e0;
+  text-align: center; }
+
+h3 {
+  font-size: 1.8rem; }
+
+/* BACKGROUND STYLES */
+/* Credits to Clippy for the clip-path code */
+.shapeTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #a4ceea;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 46%, 0 71%);
+  clip-path: polygon(0 0, 100% 0, 100% 46%, 0 71%);
+  z-index: -5; }
+
+/* SUGGESTION SECTION */
 .suggestionBox {
+  margin: 10vh auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,8 +206,74 @@ footer {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  height: 10vh;
+  width: 60%;
+  color: white;
+  visibility: hidden; }
 
 .option {
-  border: 1px solid lime;
   width: 40%; }
+
+.suggestionBox p, h3 {
+  font-size: 1.6rem;
+  text-shadow: 1px 2px #f9c716, 2px 4px #f9c716, 3px 6px #f9c716, 4px 8px #f9c716, 5px 10px #f9c716; }
+
+/* BUTTON STYLES */
+/* Credits to http://jsfiddle.net/Calou/GCdDt/ for button code*/
+button {
+  background: #fcb5c8;
+  border: none;
+  font-size: 1.4rem;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  color: #f73a6d;
+  border-radius: 1rem;
+  -webkit-box-shadow: 1px 2px #f73a6d, 2px 4px #f73a6d, 3px 6px #f73a6d, 4px 8px #f73a6d, 5px 10px #f73a6d, 0 15px 20px rgba(0, 0, 0, 0.35);
+  box-shadow: 1px 2px #f73a6d, 2px 4px #f73a6d, 3px 6px #f73a6d, 4px 8px #f73a6d, 5px 10px #f73a6d, 0 15px 20px rgba(0, 0, 0, 0.35);
+  -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+  transition: -webkit-box-shadow .1s ease-in-out;
+  transition: box-shadow .1s ease-in-out;
+  transition: box-shadow .1s ease-in-out, -webkit-box-shadow .1s ease-in-out;
+  text-shadow: 0 -1px 1px #ab0733, 0 0 5px rgba(255, 255, 255, 0.8); }
+
+button:hover {
+  background-color: #fdceda;
+  text-shadow: 0 -1px 1px #ab0733, 0 0 5px rgba(255, 255, 255, 0.8); }
+
+button:active, button:focus {
+  -webkit-box-shadow: 1px 2px #f73a6d, 2px 4px #f73a6d, 3px 6px #f73a6d, 4px 8px #f73a6d, 5px 10px #f73a6d, 0 12px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 2px #f73a6d, 2px 4px #f73a6d, 3px 6px #f73a6d, 4px 8px #f73a6d, 5px 10px #f73a6d, 0 12px 10px rgba(0, 0, 0, 0.3); }
+
+button:active {
+  -webkit-transform: translate(0, 4px);
+  transform: translate(0, 4px); }
+
+/* MEDIA QUERY STYLES */
+@media (max-width: 940px) {
+  .word {
+    height: 35vh;
+    margin-top: 5vh; }
+  .suggestionBox {
+    width: 80%; } }
+
+@media (max-width: 600px) {
+  .suggestionBox {
+    margin: 2rem 0;
+    width: 100%; } }
+
+@media (max-width: 560px) {
+  .word {
+    font-size: 1.8rem; }
+  button {
+    font-size: 1.2rem; } }
+
+@media (max-width: 450px) {
+  button {
+    font-size: 1.0rem; }
+  h3 {
+    font-size: 1.2rem; } }
+
+@media (max-width: 420px) {
+  .word {
+    font-size: 1.6rem; } }
